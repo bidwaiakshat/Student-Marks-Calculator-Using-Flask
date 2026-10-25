@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+    <head>
+    <title>Student Marks Calculator</title>
+    </head>
+    <body>
+        <h1>Student Marks Calculator</h1>
+        <p>Enter marks out of 100 for each subject</p>
+
+        {% if error %}
+        <p style="color: red;">{{error}}</p>
+        {% endif %}
+
+        <form action="/calculate" method="POST">
+            <label>Student Name:</label>
+            <input type="text" name="name" required>
+            <br><br>
+
+            <label>Mathematics:</label>
+            <input type="number" name="maths" min="0" max="100" step="any" required>
+            <br><br>
+
+            <label>Science:</label>
+            <input type="number" name="science" min="0" max="100" step="any" required>
+            <br><br>
+
+            <label>Computer Science:</label>
+            <input type="number" name="computer" min="0" max="100" step="any" required>
+            <br><br>
+
+            <label>English:</label>
+            <input type="number" name="english" min="0" max="100" step="any" required>
+            <br><br>
+
+            <label>Social Studies:</label>
+            <input type="number" name="sst" min="0" max="100" step="any" required>
+            <br><br>
+
+            <button type=""submit>Calculate Result</button>
+
+
+        </form>
+        <p><a href="/about">About this project</a></p>
+    </body>
+</html>
